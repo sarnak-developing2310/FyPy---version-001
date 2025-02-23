@@ -16,3 +16,4 @@ langchain_huggingface
 sentence_transformers
 openpyxl
 scikit-learn
+numpy

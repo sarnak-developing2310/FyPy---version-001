@@ -1,0 +1,11 @@
+credentials:
+  usernames:
+    johndoe:
+      name: John Doe
+      password: "$2b$12$7Q6OaZg4QZ9T1sfxP8RrPeE57yhfH..5H5q99Nqk3a.V0PPG59X3W"  # hashed "password123"
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: financehub_cookie
+preauthorized:
+  emails: []

@@ -37,7 +37,7 @@ def render():
     metric_card(col3, "Crypto Holdings", "₹5,20,000", "-0.75%", "#FF4500")  # Orange
     metric_card(col4, "Paper Trading P/L", "+₹75,000", "+2.15%", "#8A2BE2")  # Purple
 
-    # ✅ Portfolio Performance Chart
+    # ✅ Portfolio Performance Chart (Updated Line Graph Section)
     st.subheader("Portfolio Performance")
     df = generate_time_series("2024-01-01", "2024-03-14", 3200000, 5000)
     idx = st.slider("Select Day to Highlight", 0, len(df)-1, 10)
@@ -61,8 +61,21 @@ def render():
     fig.update_layout(
         plot_bgcolor='white', paper_bgcolor='white',
         margin=dict(t=20, l=20, r=20, b=20),
-        xaxis=dict(showgrid=True, gridcolor='#e5e5e5'),
-        yaxis=dict(showgrid=True, gridcolor='#e5e5e5', tickprefix='₹')
+        xaxis=dict(
+            showgrid=True,
+            gridcolor='#e5e5e5',
+            title='Date',
+            title_font=dict(color='black', size=14),
+            tickfont=dict(color='black')
+        ),
+        yaxis=dict(
+            showgrid=True,
+            gridcolor='#e5e5e5',
+            title='Portfolio Value (₹)',
+            title_font=dict(color='black', size=14),
+            tickfont=dict(color='black'),
+            tickprefix='₹'
+        )
     )
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 

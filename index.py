@@ -120,7 +120,7 @@ pages_map = {
     "Equity Analysis Bot": ai_advisor.show_page,
     "Investments": investments.render,
     #"Reports": reports.render,
-    "Stocks": stocks.render,
+    "Stocks": stocks.show_page,
     "Crypto": crypto.show_page,
     "Paper Trading": paper_trading.render,
     "Your Holdings": your_holdings.render,
